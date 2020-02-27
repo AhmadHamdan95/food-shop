@@ -1,0 +1,96 @@
+.header{
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  //border-bottom: 1px solid #eff0f2;
+  width: 100%;
+  height: 150px;
+  @include media-breakpoint-up(md){
+    height: 100px;
+  }
+
+  .search{
+    form{
+      position: relative;
+      input[type="search"]{
+        height: 48px;
+        border: 1px solid $second-color;
+        border-radius: 25px;
+        outline: 0;
+        color: $main-color;
+        transition: all 0.5s ease;
+        &::-webkit-search-cancel-button{
+          -webkit-appearance:none;
+        }
+        &::-webkit-input-placeholder{
+          color: #9b9b9b;
+        }
+        &:focus{
+          border-color: #BFC1C3;
+        }
+      }
+      button[type="submit"]{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 48px;
+        width: 48px;
+        border: 0;
+        border-radius: 25px;
+        outline: 0;
+        background-color: transparent;
+        color: $second-color;
+        transition: all 0.5s ease;
+        &:hover{
+          color: $main-color;
+        }
+      }
+    }
+  }
+
+  .user{
+    font-size: 14px;
+    color: $main-color;
+    .user-icon,
+    .cart-icon{
+      font-size: 16px;
+    }
+    .divider{
+      color: #e5e7ea;
+    }
+  }
+
+  .nav-btn{
+    span{
+      display: block;
+      width: 30px;
+      height: 2px;
+      border-radius: 5px;
+      margin-top: 9px;
+      margin-bottom: 9px;
+      background-color: $main-color;
+      transform-origin: 0;
+      transition: all 0.5s ease;
+    }
+  }
+
+}
+
+body{
+  &.mobile-menu-active{
+    .nav-btn{
+      span{
+        &:first-child{
+          transform: rotate(45deg);
+          transform-origin: 0 50%;
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:last-child{
+          transform: rotate(-45deg);
+          transform-origin: 0 50%;
+        }
+      }
+    }
+  }
+}

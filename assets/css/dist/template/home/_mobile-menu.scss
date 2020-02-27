@@ -1,0 +1,25 @@
+.mobile-menu{
+  position: fixed;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 150px);
+  z-index: 0;
+  overflow-y: scroll;
+  opacity: 0;
+  transition: all 0.5s ease;
+  @include media-breakpoint-only(md){
+    top: 100px;
+    height: calc(100% - 100px);
+  }
+}
+
+body{
+  &.mobile-menu-active{
+    overflow: hidden;
+    .mobile-menu{
+      z-index: $z-index;
+      opacity: 1;
+    }
+  }
+}

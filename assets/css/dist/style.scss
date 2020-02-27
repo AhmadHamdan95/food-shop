@@ -1,0 +1,29 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@import "template/layouts/variables";
+
+@import "template/layouts/all";
+
+@import "template/layouts/header";
+
+@import "template/layouts/login-box";
+
+@import "template/home/mobile-menu";
+
+@import "template/home/main-menu";
+
+@import "template/home/slider";
+
+@import "template/home/extrapriser";
+
+@import "template/home/advert";
+
+@import "template/home/best-products";
+
+@import "template/home/popular-goods";
+
+@import "template/layouts/footer-pages";
+
+@import "template/layouts/footer";

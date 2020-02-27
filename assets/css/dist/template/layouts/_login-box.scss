@@ -1,0 +1,79 @@
+.login-box{
+  position: absolute;
+  top: -700px;
+  right: 30px;
+  @include media-breakpoint-only(xs){
+    right: -50px;
+  }
+  opacity: 0;
+  //background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 240px;
+  z-index: 10;
+  transition: all 0.5s ease;
+
+  .user-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .user-name{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100px;
+  }
+
+  [type="email"],
+  [type="password"]{
+    background-color: #eff0f3;
+    border: 1px solid #eff0f3;
+  }
+  [type="submit"]{
+    background-color: #e02c2b;
+    border: 1px solid #eff0f3;
+  }
+
+  .login-box-medias{
+    font-size: 12px;
+    .logga-in-med{
+      color: #a0a0a2;
+    }
+    a{
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: #ffffff;
+      @each $item in $navbarMedias{
+        &[class*="#{nth($item, 1)}"] {
+          background-color: nth($item, 2);
+        }
+      }
+    }
+  }
+
+  .divider{
+    height: 1px;
+    background-color: #dcdcdf;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .ny-kund{
+    color: #a0a0a2;
+  }
+
+  .ga-med-gratis{
+    background-color: #10d658;
+    font-size: 16px;
+  }
+
+}
+
+.login-box-active{
+  top: 65px;
+  opacity: 1;
+}

@@ -1,0 +1,71 @@
+.footer-pages{
+  background-color: #f2f3f6;
+  border-top: 1px solid #e9eaed;
+
+  .affar{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #222;
+  }
+
+  .footer-text{
+    font-size: 13px;
+    color: #898989;
+  }
+
+  .socialMedia{
+    display: flex;
+    a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      color: #818181;
+      background-color: #e4e4e4;
+      transition: all 0.5s ease;
+      &:hover{
+        color: #fff;
+        @each $item in $navbarMedias{
+          &[class*="#{nth($item, 1)}"] {
+            background-color: nth($item, 2);
+          }
+        }
+      }
+    }
+  }
+
+  .subscribe{
+    border: 1px solid #d8d8d8;
+    input{
+      background-color: transparent;
+      border: 0;
+      &::-webkit-input-placeholder{
+        font-size: 11px;
+      }
+    }
+    button{
+      background-color: transparent;
+      border: 0;
+      color: #000;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+
+  .kategorier{
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+  }
+
+  ul{
+    li{
+      margin-bottom: 8px;
+      a{
+        font-size: 14px;
+        color: #898989;
+      }
+    }
+  }
+}
